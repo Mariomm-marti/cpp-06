@@ -1,3 +1,5 @@
+#include <limits>
+#include <iomanip>
 #include <iostream>
 #include <string>
 
@@ -11,7 +13,8 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		return 1;
 	givenValue = std::stof(*(argv + 1));
-	std::cout << "float: '" << givenValue << "'" << std::endl;
+	std::cout << std::setprecision(5) << std::fixed;
+	std::cout << "float: '" << givenValue << "f'" << std::endl;
 	asChar = static_cast<char>(givenValue);
 	if (asChar < 32)
 		std::cout << "char: non printable" << std::endl;
