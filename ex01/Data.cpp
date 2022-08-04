@@ -9,9 +9,15 @@ Data::Data(Data const &copy)
 
 Data::Data(int const num) : _number(num) { }
 
-~Data::Data(void) { }
+Data::~Data(void) { }
 
-int	getNumber(void) const
+Data	&Data::operator=(Data const &rhs)
+{
+	_number = rhs.getNumber();
+	return *this;
+}
+
+int	Data::getNumber(void) const
 {
 	return _number;
 }

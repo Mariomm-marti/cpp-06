@@ -14,7 +14,7 @@ public:
 	Data(int const num);
 	~Data(void);
 
-	Data	&operator=(Data &rhs);
+	Data	&operator=(Data const &rhs);
 	int		getNumber(void) const;
 };
 

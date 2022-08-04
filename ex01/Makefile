@@ -1,4 +1,4 @@
-NAME		= convert
+NAME		= serialize
 
 SRCS		= main.cpp \
 			  Data.cpp
